@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Otakudesu Mirror
 // @namespace    gvoze32/otakudesumirror
-// @version      1.0.0
+// @version      1.0.1
 // @description  Force 720p mirror as default player.
 // @author       gvoze32
 // @grant        none
@@ -12,14 +12,17 @@
 // ==/UserScript==
 
 var urlName = window.location.href.toString()
-const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-var rand = random(1, 3);
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+var rand = getRndInteger(1,3)
+console.log(rand)
 
 if (urlName.indexOf("otakudesu") != -1) {
-    if (urlName.indexOf("?page=all") != -1) return false;
+    if (urlName.indexOf("?mirror-720p=") != -1) return false;
     var oldPath = window.location.pathname;
-    if (!/\?mirror-720p=$rand$/.test(oldPath)) {
-    var newPath = oldPath + "?mirror-720p=$rand";
+    if (!/\?mirror-720p="$/.test(oldPath)) {
+    var newPath = oldPath + "?mirror-720p=" + rand;
     window.location.replace(newPath);
     }
 }
