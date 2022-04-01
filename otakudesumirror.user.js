@@ -19,9 +19,9 @@ var rand = getRndInteger(1,3)
 console.log(rand)
 
 if (urlName.indexOf("otakudesu") != -1) {
-    if (urlName.indexOf("?mirror-720p=") != -1) return false;
+    if (urlName.indexOf("?mirror") != -1) return false;
     var oldPath = window.location.pathname;
-    if (!/\?mirror-720p="$/.test(oldPath)) {
+    if (!/\?mirror="$/.test(oldPath)) {
     var newPath = oldPath + "?mirror-720p=" + rand;
     window.location.replace(newPath);
     }
