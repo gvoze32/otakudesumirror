@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Otakudesu Mirror
 // @namespace    gvoze32/otakudesumirror
-// @version      1.0.1
+// @version      2.0.0
 // @description  Force 720p mirror as default player.
 // @author       gvoze32
 // @grant        none
