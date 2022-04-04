@@ -10,4 +10,4 @@ First you need to install either one of these user-script add-ons for your brows
 Then open [this](https://github.com/gvoze32/otakudesumirror/raw/main/otakudesumirror.user.js) to show Install dialog.
 
 ### Affected Sites
-* Otakudesu.live
+* Otakudesu.site
