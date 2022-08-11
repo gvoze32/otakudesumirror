@@ -7,7 +7,7 @@
 // @grant        GM_addStyle
 // @match        *://*.otakudesu.watch/episode/*
 // @run-at       document-end
-// @require     http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js
+// @require      http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js
 // @updateURL    https://raw.githubusercontent.com/gvoze32/otakudesumirror/main/otakudesumirror.user.js
 // @downloadURL  https://raw.githubusercontent.com/gvoze32/otakudesumirror/main/otakudesumirror.user.js
 // ==/UserScript==
