@@ -1,28 +1,25 @@
 // ==UserScript==
 // @name         Otakudesu Mirror
 // @namespace    gvoze32/otakudesumirror
-// @version      2.2.0
+// @version      2.3.0
 // @description  Force 720p mirror as default player.
 // @author       gvoze32
-// @grant        none
-// @match        *://*.otakudesu.site/*
-// @run-at       document-start
+// @grant        GM_addStyle
+// @match        *://*.otakudesu.watch/episode/*
+// @run-at       document-end
+// @require     http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js
 // @updateURL    https://raw.githubusercontent.com/gvoze32/otakudesumirror/main/otakudesumirror.user.js
 // @downloadURL  https://raw.githubusercontent.com/gvoze32/otakudesumirror/main/otakudesumirror.user.js
 // ==/UserScript==
 
-var urlName = window.location.href.toString()
-function getRndInteger(min, max) {
-  return Math.floor(Math.random() * (max - min) ) + min;
-}
-var rand = getRndInteger(1,3)
-console.log(rand)
 
-if (urlName.indexOf("otakudesu") != -1) {
-    if (urlName.indexOf("?") != -1) return false;
-    var oldPath = window.location.pathname;
-    if (!/\?"$/.test(oldPath)) {
-    var newPath = oldPath + "?mirror-720p=" + rand;
-    window.location.replace(newPath);
-    }
+
+var items = document.body.getElementsByTagName("a");
+for (var i = 0; i < items.length; ++i) {
+    if (items[i].textContent == "ondesuhd") {
+        items[i].click();
+        console.log("clicked", i) 
+    } else {
+        console.log("loop",i)
+    } 
 }
