@@ -12,3 +12,4 @@ Then open [this](https://github.com/gvoze32/otakudesumirror/raw/main/otakudesumi
 
 ### Affected Sites
 * Otakudesu.watch
+test
