@@ -12,8 +12,6 @@
 // @downloadURL  https://raw.githubusercontent.com/gvoze32/otakudesumirror/main/otakudesumirror.user.js
 // ==/UserScript==
 
-
-
 var items = document.body.getElementsByTagName("a");
 for (var i = 0; i < items.length; ++i) {
     if (items[i].textContent == "ondesuhd") {
